@@ -43,3 +43,9 @@ Route::group(['prefix' => 'users', 'middleware' => 'auth'], function() {
 Route::get('middleware', function() {
     return "MiddleWare";
 })->middleware('auth');
+
+Route::get('login', function() {
+    return "Error<br>You'er not login!";
+})->name('login');
+ 
+Route::resource('news', 'NewsController');
