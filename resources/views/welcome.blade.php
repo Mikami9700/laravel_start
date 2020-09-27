@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{asset('css/style.css')}}">
     <title>Document</title>
 </head>
     <body>
@@ -31,6 +32,15 @@
                     <a href="{{route('a',10)}}">TEST 1</a>
                     <a href="{{route('b','fuck')}}">TEST 2</a>
                 </div>
+                <hr>
+                <div class="links">
+                    <h3>{{ $name}}</h3>
+                    <h3>{{ $age }}</h3>
+                </div>
+                {{-- <div class="links">
+                    <h3>{{ $obj->name }}</h3>
+                    <h3>{{ $obj->age }}</h3>
+                </div> --}}
             </div>
         </div>
     </body>

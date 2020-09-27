@@ -13,7 +13,30 @@ class NewsController extends Controller
      */
     public function index()
     {
-        return "Index";
+
+        /**
+         *  Array
+         *  we display array type value into view 
+         */
+        /* $arr=[];
+        $arr['name'] = "Mlouk";
+        $arr['age'] = 21;
+        return view('welcome', $arr); */
+
+        /**
+         * Object
+         * We  Display Object type into view 
+         */
+/*      $obj = new \stdClass();
+        $obj->name = "Mlouk";
+        $obj->age  = 23;
+        return view('welcome', compact('obj')); */
+
+        /**
+         *  value 
+         *  Simpl value to view
+         */
+        // return view('welcome')->with(['name' => 'abdulmalik', 'age' => 23]);
     }
 
     /**
@@ -45,7 +68,7 @@ class NewsController extends Controller
      */
     public function show($id)
     {
-        //
+        return $id;
     }
 
     /**
