@@ -18,7 +18,8 @@ class NewsController extends Controller
          *  Array
          *  we display array type value into view 
          */
-        /* $arr=[];
+        /* 
+        $arr=[];
         $arr['name'] = "Mlouk";
         $arr['age'] = 21;
         return view('welcome', $arr); */
