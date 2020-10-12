@@ -24,9 +24,17 @@ Route::get('landing', function() {
     return view('landing');
 });
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('main', function() {
+    return view('layouts.main');
 });
+/* 
+Route::get('/', function () {
+    
+}); */
+
+Route::get('/', 'NewsController@index');
+
+
 
 Route::get('/show-number/{id}', function ($id) {
     

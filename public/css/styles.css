@@ -411,6 +411,7 @@ h2,
 
 h3,
 .h3 {
+    color: var(--red);
     font-size: 1.75rem;
 }
 

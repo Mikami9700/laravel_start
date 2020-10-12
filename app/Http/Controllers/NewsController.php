@@ -28,10 +28,10 @@ class NewsController extends Controller
          * Object
          * We  Display Object type into view 
          */
-/*      $obj = new \stdClass();
+        $obj = new \stdClass();
         $obj->name = "Mlouk";
         $obj->age  = 23;
-        return view('welcome', compact('obj')); */
+        return view('welcome', compact('obj'));
 
         /**
          *  value 
