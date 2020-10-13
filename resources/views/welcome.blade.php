@@ -42,9 +42,37 @@
                         </div> --}}
                         <div class="links">
                             {{-- Englis to Arabic --}}
-                            <p>{{ __('messages.Hello')}}</p>
-                            <h3>{{ $obj->name }}</h3>
-                            <h3>{{ $obj->age }}</h3>
+                            <h3>{{ __('messages.Hello')}}</h3>
+                            {{-- Pass value --}}
+                            {{-- Object --}}
+                            {{-- <h3>{{ $obj->name }}</h3>
+                            <h3>{{ $obj->age }}</h3> --}}
+                            {{-- simple Variable --}}
+                           {{--  <h3>{{ $name }}</h3>
+                            <h3>{{ $age }}</h3> --}}
+                            {{-- Array --}}
+                            {{-- <h3>{{ $name }}</h3>
+                            <h3>{{ $age }}</h3> --}}
+                            {{-- ForEach  --}}
+                            @foreach ($arr as $item)
+                                <p>{{ $item }}</p>
+                            @endforeach
+
+                            {{-- ForElse --}}
+                            @forelse ($arr as $item)
+                                
+                            @empty
+                                <p>0</p>
+                            @endforelse
+
+                            {{-- IF --}}
+                            @if( 1 == 'a') 
+                                <p>Yes You're Abdulmalik</p>
+                            @elseif(1 === 1) 
+                                <p>Wrong Number</p>
+                            @else 
+                                <p>Nothing</p>
+                            @endif
                         </div>
                     </div>
                 </div>

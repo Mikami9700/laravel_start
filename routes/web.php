@@ -35,7 +35,11 @@ Route::get('/', function () {
 Route::get('/', 'NewsController@index');
 
 
-
+/**
+ *  Route Return value 
+ *  used in Show, edit, update, destory routes 
+ * 
+ */
 Route::get('/show-number/{id}', function ($id) {
     
     return $id;

@@ -14,7 +14,27 @@ class NewsController extends Controller
     public function index()
     {
 
-        /**
+    /****************************     
+        // Simple Variable
+        $simple = 'mlouk';
+        //dd($simple);
+        
+        // Array
+        $array = ["GTA IV", "Saints row", "Red Dead"];
+        // dd($array[0]);
+
+        // Associative Array
+        $arr = ["name" => "abdulmalik"]; 
+        // dd($arr["name"]);
+
+        // Do collections 
+        $collections = collect([1, 2, 3]);
+        // dd($collections);
+        // dd(gettype($collections));
+         *************************************/
+
+        // Here we pass value with [object, array, simple variable]
+        /*********Array
          *  Array
          *  we display array type value into view 
          */
@@ -23,21 +43,31 @@ class NewsController extends Controller
         $arr['name'] = "Mlouk";
         $arr['age'] = 21;
         return view('welcome', $arr); */
+        /***************END Array*****************/
 
-        /**
+        /***********Object
          * Object
          * We  Display Object type into view 
          */
-        $obj = new \stdClass();
+        /* $obj = new \stdClass();
         $obj->name = "Mlouk";
         $obj->age  = 23;
-        return view('welcome', compact('obj'));
+        return view('welcome', compact('obj')); */
+        /***************END Object*******************/
+        /* $obj = new \stdClass();
+        $obj->name = "abdulmalik";
+        $obj->age = 23;
+        return view('welcome', compact('obj')); */
 
-        /**
-         *  value 
-         *  Simpl value to view
+        /*******Variable
+         *  Variable
+         *  Simpl Variable to view
          */
         // return view('welcome')->with(['name' => 'abdulmalik', 'age' => 23]);
+
+        $arr = ["naruto","dragon ball", "death note", "welcome to the nhk"];
+        return view('welcome', compact('arr'));
+
     }
 
     /**
