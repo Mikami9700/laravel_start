@@ -12,13 +12,15 @@ use App\Http\Controllers\Front\UserController;
 |
 */
 
+Route::redirect('/', '/home');
+
 /**
  *  Route
- *  Class  . method  string = url   Function return/Controller class + method
+ *  Class  . method  string = url , Function return/Controller class + method
  *  Route :: get    ('landing',     function() {
  *      return view('landing');
  *   });
- * 
+ *  Route Must return something
  **/
 Route::get('landing', function() {
     return view('landing');
@@ -32,7 +34,7 @@ Route::get('/', function () {
     
 }); */
 
-Route::get('/', 'NewsController@index');
+//Route::get('/', 'NewsController@index');
 
 
 /**
@@ -90,3 +92,11 @@ Route::get('login', function() {
  */
 Route::resource('news', 'NewsController');
 
+ // Login - Register 
+Auth::routes(['verify' => true]);
+
+/** 
+ * middleware ('verified')
+ * must do to verified the email user
+ */
+Route::get('/home', 'HomeController@index')->name('home')->middleware('verified');
