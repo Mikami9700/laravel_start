@@ -92,7 +92,11 @@ Route::get('login', function() {
  */
 Route::resource('news', 'NewsController');
 
- // Login - Register 
+/**
+ * Login - Register
+ * 'verify' => 
+ *  verify the email 
+ */
 Auth::routes(['verify' => true]);
 
 /** 
